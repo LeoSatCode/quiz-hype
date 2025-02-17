@@ -4,6 +4,7 @@ import quizz_questions from '../../../data/quizz_questions.json'
 
 @Component({
   selector: 'app-quiz',
+	standalone: true,
   imports: [CommonModule],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
