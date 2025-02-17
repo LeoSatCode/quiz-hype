@@ -15,7 +15,7 @@ export class QuizComponent implements OnInit{
 	questions: any;
 	questionSelected: any;
 	questionIndex:number = 0;
-	quentionMaxIndex:number = 0;
+	questionMaxIndex:number = 0;
 
 	answers: string[] = [];
 	answerSelected: string = "";
@@ -33,7 +33,7 @@ export class QuizComponent implements OnInit{
       this.questionSelected = this.questions[this.questionIndex]
 
       this.questionIndex = 0
-      this.quentionMaxIndex = this.questions.length
+      this.questionMaxIndex = this.questions.length
 
     }
 	}
@@ -46,7 +46,7 @@ export class QuizComponent implements OnInit{
 		async nextStep(){
 			this.questionIndex+=1
 
-			if(this.quentionMaxIndex > this.questionIndex){
+			if(this.questionMaxIndex > this.questionIndex){
 				this.questionSelected = this.questions[this.questionIndex]
 			}else{
 				const finalAnswer:string = await this.checkResult(this.answers)
